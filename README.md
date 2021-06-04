@@ -11,6 +11,7 @@ my coding styles
 - max rows per class/struct := (1 << 7) - 1
   - if exceeds, such a class/struct should be split the functionality into other classes/structs 
 - max rows per file := (1 << 8) - 1
+  - needless to say, to write a large amount of rows in a file is nonsense and it is hard to read.    
 
 
 # Python
