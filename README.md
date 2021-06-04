@@ -9,7 +9,7 @@ my coding styles
 - max rows per function := (1 << 5) - 1
   - if exceeds, it's time to refactor.
 - max rows per class/struct := (1 << 7) - 1
-  - if excedds, such a class/struct should be split the functionality into other classes/structs 
+  - if exceeds, such a class/struct should be split the functionality into other classes/structs 
 - max rows per file := (1 << 8) - 1
 
 
