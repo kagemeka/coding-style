@@ -26,11 +26,31 @@ my coding styles
 # Python
 
 ## variable names
-- <foo>_dir := /path/to/<directory>/
-- <var>_path := /path/to/<file>
-- <var>_file := <file> (with extension)
-- <var>_name := <file> (without extension)
-- __<var> := class's peoperties and functions for the instances. 
+- foo_dir := '/path/to/directory/'
+- bar_path := '/path/to/file'
+- baz_file := 'file.ext' (with extension)
+- foo_name := 'file' (without extension)
+- __variable := two heading underscores. This is used for classes' internal attributes(properties, functions). 
   - if there is no special reason, they are start with double consecutive under scores '__'.
-  - to access to instance properties/functions, it's gonna be referenced via methods decorated with @property(setter and getter). 
-  - exeption: `dataclass` properties are defined as normal form `<var>`
+  - to access to instance properties/functions, it's gonna be referenced via methods decorated with @property(setter and getter).
+    - or if it's needed, you can access like `instance._ClassName__attribute_name` 
+  - exeption: `dataclass` properties are defined as normal form `<var>` because they should be accessed directory by default.
+
+
+## when to use `Class / Data Class / function`.
+### Data Class
+- focus on the properties themselvs
+- Data Class is similar to NamedTuple
+
+### Class 
+- it's needed to store some datas, but the logic or algorithms are more emphersized than datas.
+- doing inheritance or realize polymorphism
+- it's needed to split clearly preprocess and main logic because preorcess is enough to be run once but main process may be run repeatedly.
+- implementing complicated algorithm.
+#### example  
+- a class has its configuration as Config dataclass
+
+
+### function
+- it's not needed to store any data but only logics.
+- implementing simple algorithm
